@@ -12,7 +12,7 @@ private:
 	std::string firstName_;
 	std::string secondName_;
 
-public:
+public: 
 	//default constructor
 	Author();
 
