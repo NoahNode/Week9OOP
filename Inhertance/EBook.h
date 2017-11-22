@@ -18,8 +18,8 @@ public:
 		bookGenre genre, float price, std::string format, float filesize, 
 		std::string language, bool typeSetting, bool screenReaderSupport);
 
-	~EBook();
+	virtual ~EBook() override;
 
-	std::string ToString();
+	virtual std::string ToString() override;
 };
 

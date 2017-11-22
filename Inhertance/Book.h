@@ -30,7 +30,7 @@ public:
 	Book(std::string title, Author author, std::string  publisher, std::string isbn13, bookGenre genre, float price);
 
 	//Default destructor
-	~Book();
+	virtual ~Book();
 
 	std::string GetTitle();
 	void SetTitle(std::string title);
@@ -48,5 +48,5 @@ public:
 	void SetPrice(float price);
 
 	
-	std::string ToString() ;
+	virtual std::string ToString();
 };

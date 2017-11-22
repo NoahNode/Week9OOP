@@ -33,7 +33,6 @@ int main() {
 
 	EBook myEB{ "Franklin Barbecue (A Meatsmoking Manifesto)", aaron, "Ten Speed Press", "978-1607747208", bookGenre::Cuisine, 17.46f, "Kindle Edition", 63145.0f, "English", true, true  };
 
-	myPB.SetTitle("hello sailor");
 
 	//cout << myPB.ToString() << endl;
 	//cout << myEB.ToString() << endl;
@@ -44,21 +43,26 @@ int main() {
 
 	//Point the book pointer at my book
 	bookPtr = &myBook;
-	cout << "\nCalling to string using a base book pointer on a book object" << endl;
-	cout << bookPtr->ToString() << endl;
+	/*cout << "\nCalling to string using a base book pointer on a book object" << endl;
+	cout << bookPtr->ToString() << endl;*/
 
 
 	//Create pointer of type physical book
 	PhysicalBook* physicalBookPtr{ nullptr };
 	physicalBookPtr = &myPB;
 
-	cout << "\nCalling to string using a derived physical book pointer on a physicalBook object" << endl;
-	cout << physicalBookPtr->ToString();
+	/*cout << "\nCalling to string using a derived physical book pointer on a physicalBook object" << endl;
+	cout << physicalBookPtr->ToString();*/
 
 
 	//Point bookptr at a physical book object?
 	bookPtr = &myPB;
 	cout << "\nCalling to string using a base book pointer on devired physical book object" << endl;
+	cout << bookPtr->ToString() << endl;
+
+
+	bookPtr = &myEB;
+	cout << "\nCalling to string using a base book pointer on devired E-Book object" << endl;
 	cout << bookPtr->ToString() << endl;
 
 

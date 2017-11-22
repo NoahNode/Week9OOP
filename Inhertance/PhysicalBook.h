@@ -14,10 +14,10 @@ public:
 
 	PhysicalBook(std::string title, Author author, std::string publisher, std::string isbn, bookGenre genre, float price, float weight, float length, float width, float depth);
 
-	~PhysicalBook();
+	virtual ~PhysicalBook() override;
 
 	void Distribute();
 
-	std::string ToString();
+	virtual std::string ToString() override;
 };
 
